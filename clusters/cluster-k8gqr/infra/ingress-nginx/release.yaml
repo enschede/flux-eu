@@ -14,16 +14,12 @@ spec:
         kind: HelmRepository
         name: ingress-nginx
         namespace: flux-system
-      # version: "4.x.x"   # optioneel vastpinnen
+      # version: "4.x.x"      # optioneel pinnen
   values:
     controller:
       ingressClassResource:
         name: nginx
-        default: true            # maak 'nginx' de default ingressClass
+        default: true
       service:
-        type: LoadBalancer       # cloud LB (EKS/GKE/AKS). Bare-metal? zie tips hieronder
+        type: LoadBalancer    # Bare-metal? Gebruik MetalLB of zet 'NodePort' met vaste poorten
       replicaCount: 1
-      metrics:
-        enabled: true
-      admissionWebhooks:
-        enabled: true
