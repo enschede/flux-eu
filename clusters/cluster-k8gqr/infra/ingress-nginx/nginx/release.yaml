@@ -1,0 +1,29 @@
+apiVersion: helm.toolkit.fluxcd.io/v2
+kind: HelmRelease
+metadata:
+  name: ingress-nginx
+  namespace: ingress-nginx
+spec:
+  interval: 5m
+  install:
+    createNamespace: true
+  chart:
+    spec:
+      chart: ingress-nginx
+      sourceRef:
+        kind: HelmRepository
+        name: ingress-nginx
+        namespace: flux-system
+      # version: "4.x.x"   # optioneel vastpinnen
+  values:
+    controller:
+      ingressClassResource:
+        name: nginx
+        default: true            # maak 'nginx' de default ingressClass
+      service:
+        type: LoadBalancer       # cloud LB (EKS/GKE/AKS). Bare-metal? zie tips hieronder
+      replicaCount: 1
+      metrics:
+        enabled: true
+      admissionWebhooks:
+        enabled: true
