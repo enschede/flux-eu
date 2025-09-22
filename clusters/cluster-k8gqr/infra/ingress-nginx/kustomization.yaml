@@ -3,10 +3,6 @@ kind: Kustomization
 metadata:
   name: infra-ingress
   namespace: flux-system
-spec:
-  interval: 1m
-  path: ./nginx
-  prune: true
-  sourceRef:
-    kind: GitRepository
-    name: flux-system   # of jouw eigen bronnaam als je die gebruikt
+resources:
+  - helmrepo.yaml
+  - release.yaml
