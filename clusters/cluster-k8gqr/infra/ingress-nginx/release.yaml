@@ -22,4 +22,4 @@ spec:
         default: true
       service:
         type: LoadBalancer    # Bare-metal? Gebruik MetalLB of zet 'NodePort' met vaste poorten
-      replicaCount: 1
+      replicaCount: 2
