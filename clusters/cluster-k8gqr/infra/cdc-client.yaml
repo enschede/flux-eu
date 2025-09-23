@@ -8,7 +8,7 @@ spec:
   interval: 1m0s
   ref:
     branch: main
-  url: https://github.com/enschede/cdc-idm.git
+  url: ssh://github.com/enschede/cdc-idm.git
   secretRef:
     name: github-deploy
 
