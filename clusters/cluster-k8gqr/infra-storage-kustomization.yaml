@@ -1,0 +1,17 @@
+apiVersion: kustomize.toolkit.fluxcd.io/v1
+kind: Kustomization
+metadata:
+  name: infra-storage
+  namespace: flux-system
+spec:
+  interval: 5m
+  path: ./infrastructure/storage
+  prune: true
+  sourceRef:
+    kind: GitRepository
+    name: flux-system            # komt uit gotk-sync.yaml
+    namespace: flux-system
+  wait: true
+  # Als je CSI-driver elders deployt, kun je dependencies instellen:
+  # dependsOn:
+  #   - name: csi-driver
