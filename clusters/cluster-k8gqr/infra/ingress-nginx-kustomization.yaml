@@ -4,14 +4,21 @@ metadata:
   name: ingress-nginx
   namespace: flux-system
 spec:
+  # Checkt git repo van ingress-nginx iedere 5 minuten als deployment goed is verlopen
   interval: 5m
+  # Git check wanneer een deployment niet goed is verlopen
+  retryInterval: 30s
+  # Folder in de git repo waar kustomization gevonden kan worden
   path: ./infrastructure/ingress-nginx
+  # Zorgt er voor dat oude bestanden zijn verwijderd in de git repo ook live worden verwijderd
   prune: true
   sourceRef:
     kind: GitRepository
     name: flux-system
     namespace: flux-system
+  # Geeft pas ready:true wanneer alle checks prositief zijn verlopen. Belangrijk voor een dependson.
   wait: true
+  # Activeer sops provider
   decryption:
     provider: sops
     secretRef:
