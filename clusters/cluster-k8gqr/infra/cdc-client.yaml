@@ -1,0 +1,36 @@
+---
+apiVersion: source.toolkit.fluxcd.io/v1
+kind: GitRepository
+metadata:
+  name: cdc-idm
+  namespace: flux-system
+spec:
+  interval: 1m0s
+  ref:
+    branch: main
+  url: https://github.com/enschede/cdc-idm.git
+  secretRef:
+    name: github-credentials
+
+---
+#apiVersion: kustomize.toolkit.fluxcd.io/v1
+#kind: Kustomization
+#metadata:
+#  name: cdc-idm
+#  namespace: flux-system
+#spec:
+#  interval: 1m
+#  path: ./src/main/deployment
+#  prune: true
+#  sourceRef:
+#    kind: GitRepository
+#    name: cdc-idm
+#    namespace: flux-system
+#  wait: true
+#  decryption:
+#    provider: sops
+#    secretRef:
+#      name: sops-age
+#  # Als je CSI-driver elders deployt, kun je dependencies instellen:
+#  # dependsOn:
+#  #   - name: csi-driver
