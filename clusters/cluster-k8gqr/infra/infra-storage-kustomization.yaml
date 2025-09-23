@@ -9,7 +9,7 @@ spec:
   prune: true
   sourceRef:
     kind: GitRepository
-    name: flux-system            # komt uit gotk-sync.yaml
+    name: flux-system
     namespace: flux-system
   wait: true
   # Als je CSI-driver elders deployt, kun je dependencies instellen:
