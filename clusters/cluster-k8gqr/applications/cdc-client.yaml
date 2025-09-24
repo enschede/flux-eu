@@ -1,4 +1,31 @@
 ---
+apiVersion: v1
+data:
+  identity: ENC[AES256_GCM,data:Qbm1QnLjkRajRgKZly4NXzhprJ2fPJNxM+MTMXig015r++3vJmHjeNREpckS9fA/icgNsFn7g8UvKXkjZx8CQmz03hrqIoO3ph6oJnnJzbVN5WdzMVRgeJ+rx7aYeaE5VNJ/AsgYsHQIwvWKG4PSbG8L/J9DutdTlbyg2zaTGiNT709deJ4hbtqX1hg1O+xvdJplQ5btTZLvjnYIQfQBLZ57xqdI5quXiEkOiSViJPOUuAJK4S2MpHJkvA0esj/1d1Q8k6qjSrTscC2ymPK7yhjDc6rLC6+KxxbN2BEAKgqwkdng/q36NyhKQz9vTmldF4Fmva7zqkj9rkQ+MeFq4UOBoKPnXqzhb0dokQOwqjesUc0LzE3bY6qO5+LYmjgOybfCIGkDLK25NuEsu4EXfnQNkjZL5MIIMfgF5kbp01f53FWCSHQxET85Z/Z1Zy9jsWi5Vskheb0Fw2zlVyORc/xyNoJoe8N4NapsMT+LOaeJ+lx/ixnUXZKv7ASNR8FlHTsdQSvFcC4W1k9kRNayy0A2b71vs2s0dRBFJGHHIhdhuM1RCu65ytQOUzVuvDxssvw03f/we5wuL9uyJrsGS4ORVOh6B4ZJhk6XiVW9jmahAAT45Kz0EeQZbH7fPpDagiH58Xzx9Jm/83RSRTdTsdVFlFqM1uLT2RDKd7MiY4NwE8bhBvO680bxZHNtSAv4wy+Ob6TIds9RJIRCMDUA5sTrfeNOR18mKPYXpWMU67U=,iv:X4CgY3PqF/pa0+wzGyfsNlIkgMxmXWUheagszD9UivU=,tag:XJwGHMGs+VBrsTeNyaG/jg==,type:str]
+  identity.pub: ENC[AES256_GCM,data:oiCxYtgUoKqmj6nj3qvKUy9uTjCAmrvLEH1rXjEs4nJ2/khlgc9XgAIreNRM2OCfqXNILnL278RMlUU5bUq77qViTBbwFIpD5R2TaUjN/GRQMZ9bSj+e6HopBj+IQWyQqR/L7bZfajPqQ6t5,iv:XDkXqqosDkhjPMQ4cj4CCWHeGzASp3jC/1MuSm12+3o=,tag:Bm5ygtjx+cx5uy40EKPfXA==,type:str]
+  known_hosts: ENC[AES256_GCM,data:1rP2PXrQeqlzcp4e2fzfmNrSwQAldfr2kCJf1txNwXPf4wa1x6zkSxm/uAvqQbzhk6NUmE6AvZLSjcAG++K65RPU5woDuDuEpRQce0m1iSzilzg7iyoP5ufdD5F1wrbRjdFyQGvj2CfOxx11gbwj2OXyNyYx10JsE0prdqXSx9b9fWG/PgF7LaL+bper1ZBCfKXdb3yLnYQMRtlBlavhy1xuMPxpbc6WBiS+bj6u5nwGBBYvmNjKbRTBSaxrug9cLhG/pICW6LgxvdxFQhIJPC70e+if5FSNibaGEJE1M8ch1PWD,iv:rct+KSQe7utaalxpLDkITcVkknvF/+zqMvg1t6HEU5I=,tag:xxC423QkZSd48lkWBQmBog==,type:str]
+kind: Secret
+metadata:
+  name: github-deploy
+  namespace: flux-system
+type: Opaque
+sops:
+  age:
+    - recipient: age1spe3avhtcgkgqujprtujackxw6au5h8tum6nk6czmxgaclprx5tsz9jrhr
+      enc: |
+        -----BEGIN AGE ENCRYPTED FILE-----
+        YWdlLWVuY3J5cHRpb24ub3JnL3YxCi0+IFgyNTUxOSBUZHY1QkVnc3pOZmtwd01I
+        bFpZZTNlekZWeTUzZkYyZVFpVHNrelAxQXowCitoRXJPUzFHVURwNnBzOEhqK0Nv
+        N3FzWGloZVNzR1VLSjhtS0JCVWxXaVEKLS0tIGRXb1E0Sk1TUW1uVGkyN1o2ZjdL
+        amFvRUdNSzd6ekdIQ3dlZE5hUWt1WW8Ka2BGQNLqsHYYXqSPPZ2OVV5/LtgjNEsD
+        2ryS7L0Lhz5iIq8eV41iT2MyNfHaATIQFKTxmNTU7EXcxKSPviV4Ww==
+        -----END AGE ENCRYPTED FILE-----
+  lastmodified: "2025-09-24T07:36:46Z"
+  mac: ENC[AES256_GCM,data:RHsn1OgxYtC7tId9ecJjDcwORimhQfvhQDvXXG8uY5CAMJ5No4kfe9WypVUcjiL15NkpLB2brvvSMWZN2o8Ab1RdXacglg6s5bXcaiBxGgTJ6sDXwM6TeNjWSTLD3wFTwW+TGL+GHnlmObIioEAjzU6QC4CWRcqr02HAn5wise4=,iv:GdsbeLvkw5EcLzTGVQLEES25d8vnTiuIqxRJKQ17i+k=,tag:77Hvx1p5rYkmQyXU+SydZg==,type:str]
+  encrypted_regex: ^(data|stringData)$
+  version: 3.10.2
+
+---
 apiVersion: source.toolkit.fluxcd.io/v1
 kind: GitRepository
 metadata:
