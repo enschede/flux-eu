@@ -25,6 +25,7 @@ sops:
   encrypted_regex: ^(data|stringData)$
   version: 3.10.2
 
+
 ---
 apiVersion: source.toolkit.fluxcd.io/v1
 kind: GitRepository
