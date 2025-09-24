@@ -76,24 +76,24 @@ spec:
   dependsOn:
     - name: ingress-nginx
 
----
-apiVersion: kustomize.toolkit.fluxcd.io/v1
-kind: Kustomization
-metadata:
-  name: cdc-idm-dev
-  namespace: flux-system
-spec:
-  interval: 1m
-  path: ./src/main/deployment/dev
-  prune: true
-  sourceRef:
-    kind: GitRepository
-    name: cdc-idm-dev
-    namespace: flux-system
-  wait: true
-  decryption:
-    provider: sops
-    secretRef:
-      name: sops-age
-  dependsOn:
-    - name: ingress-nginx
+#---
+#apiVersion: kustomize.toolkit.fluxcd.io/v1
+#kind: Kustomization
+#metadata:
+#  name: cdc-idm-dev
+#  namespace: flux-system
+#spec:
+#  interval: 1m
+#  path: ./src/main/deployment/dev
+#  prune: true
+#  sourceRef:
+#    kind: GitRepository
+#    name: cdc-idm-dev
+#    namespace: flux-system
+#  wait: true
+#  decryption:
+#    provider: sops
+#    secretRef:
+#      name: sops-age
+#  dependsOn:
+#    - name: ingress-nginx
