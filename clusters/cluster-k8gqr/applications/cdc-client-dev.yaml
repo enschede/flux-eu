@@ -31,6 +31,5 @@ spec:
     provider: sops
     secretRef:
       name: sops-age
-  # Als je CSI-driver elders deployt, kun je dependencies instellen:
-  # dependsOn:
-  #   - name: csi-driver
+  dependsOn:
+    - name: ingress-nginx
