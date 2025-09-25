@@ -34,7 +34,7 @@ spec:
   interval: 1m0s
   ref:
     branch: main
-  url: ssh://git@github.com/enschede/transip-nginx.git
+  url: ssh://github.com/enschede/transip-nginx.git
   secretRef:
     name: github-deploy-ingress-nginx
 
