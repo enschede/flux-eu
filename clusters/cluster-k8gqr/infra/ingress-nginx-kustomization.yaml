@@ -33,7 +33,7 @@ metadata:
 spec:
   interval: 1m0s
   ref:
-    branch: main
+    branch: master
   url: ssh://github.com/enschede/transip-nginx.git
   secretRef:
     name: github-deploy-ingress-nginx
