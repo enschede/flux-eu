@@ -1,3 +1,44 @@
+---
+apiVersion: v1
+kind: Secret
+metadata:
+  name: github-deploy-ingress-nginx
+  namespace: flux-system
+stringData:
+  identity: ENC[AES256_GCM,data:4uQX5tXe7PgRqshOqpgwUU9NvJnmBpaSC1mv1OT+DR+5cB3kRmzbAILpyIqmMU3jU7XDLPoB7syyhDqHvg15hixa8HOLE2jW0AGgBhWCXn96qEcqJirRC+ZpLATg0MWEv89PY7KMvWsX9qryzsRwbSAV0vAmZUx8/RzeCivx1p+ZXxWAvDf5knOFif6lrf0kFLywDF+3xZCLRhj8J/OYa/lm6z+pwyM7O55cKxSVqbaphFJcAwc8R3jgfgbYYTINcBNe0Wl5EM+DXmbem3LzXngRKXkKfldDLuiLvvKc1bReMQXq0hm8YLuJPLh0IoCchSCayknAWLcx/hsA6sLgiP+rlRr8KhtqVuTjzlwnvchnSSqhgTIet0lUub0YDaYU+FY6SR952GeEKHWAinUBF7BXOKZcyKiWW23wvX9xWlpYlxtyFm8a+2EN7MnUtisHy8IGJyFH/jh1Q+XwVbAMOtypn9iJKdCNf+VFkWpVqsvjRRuyEqIa15+6v4TzODko613kDLmIHqTkyRdllXzATzG7MO8iNDaUBUBxlUY0Id3ifEo=,iv:xlUxejBf/z/3nv2+uWv8sNIPFRKye26jKzQS+1fYylY=,tag:OlKofTOTM/mYctp4NleKdg==,type:str]
+  identity.pub: ENC[AES256_GCM,data:5It1Sd/nOS9dyR7schov/imON0zJ0kCq7Y6Dzkk/VVwlFa1FiYno2xmlFg9DQ9QSck5KXDHiSR8JJrX8+wAar7Ba9g/mfFwVw8dDIef9wDjG,iv:ndZ6gkKEB/dLwTEWk3kM8RhEgZ6EjnIcDQwrriS2Exg=,tag:urvWZ7/PYZWYfPgAe8xvnQ==,type:str]
+  known_hosts: ENC[AES256_GCM,data:03MqCwUC+Pmd+dh5i5fF9SHdikOKmdMZcSarDlM2Phc5l9GzShrQYRzh3A49IIWtQ883M65WQw7DuKt/3dNNID/m4sus3PyBzM3TlUWHLCBaEJa1q1SBRRt/HWUiBhoeXRl3m0EvPDTUuMv8KJphajVwXzKIUvviqjFAT/trYp8nEI9ePiZ1/gSWMIP7cIKViZmMC2dFW+Nb/VZONybadH1tmVTqKnSJ7zKt,iv:AYGAYPIQSOtS2ILs56pzruAzBdQAAtSo+hMILPK/3yI=,tag:/9l32OM3wAxZcLXUnHrxwg==,type:str]
+sops:
+  age:
+    - recipient: age1spe3avhtcgkgqujprtujackxw6au5h8tum6nk6czmxgaclprx5tsz9jrhr
+      enc: |
+        -----BEGIN AGE ENCRYPTED FILE-----
+        YWdlLWVuY3J5cHRpb24ub3JnL3YxCi0+IFgyNTUxOSAwVXVHcnhpSENhNnZlVEJp
+        bWpGakt1aWFiU2M0c2M5Y1Iyd0lUWTVBWENrCklVcE5kL3dRb3VSajlGNEpyZ1Jr
+        YlMxOGR4aHdDQ1RsdEEvajVJL212Uk0KLS0tIGNUM2VOS2UrcDloalFUVTVETk9P
+        cnF1dmJBRW4wYnNrcTVhM0FWeDlUajQKuTCfgJsKfMX/Zw1TQ35pPkhdghB9xmSo
+        AlYjMBbpDUC70wRMNgJ8hxLh3PKowmabsBzoHdyOLRvQMHlbpOe6Vg==
+        -----END AGE ENCRYPTED FILE-----
+  lastmodified: "2025-09-25T16:55:51Z"
+  mac: ENC[AES256_GCM,data:2DmYYHTo2q3+O5Shc4sXgVL8l+htVxhJSexW1Nn/ZddcOESqEQhomspiN1+ZP/R68mEcpD6gRFSxVrzpugbLZ1UpyHvVafhv9mPxtSMPjGD9Eai4FygEKcV+AVMwNYibtP+IQUjMC82l0g4Gso9LdxOooGrLiO6ZKr8SR5aq3jk=,iv:VC6jnePaW2xy1XzIpK8h8gThxYWjH+DvdoCLK+eHVdY=,tag:L4XyZFYWMciGm0McqV64vQ==,type:str]
+  encrypted_regex: ^(data|stringData)$
+  version: 3.10.2
+
+---
+apiVersion: source.toolkit.fluxcd.io/v1
+kind: GitRepository
+metadata:
+  name: ingress-nginx
+  namespace: flux-system
+spec:
+  interval: 1m0s
+  ref:
+    branch: main
+  url: ssh://git@github.com/enschede/transip-nginx.git
+  secretRef:
+    name: github-deploy
+
+---
 apiVersion: kustomize.toolkit.fluxcd.io/v1
 kind: Kustomization
 metadata:
