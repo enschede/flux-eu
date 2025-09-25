@@ -36,7 +36,7 @@ spec:
     branch: master
   url: ssh://github.com/enschede/transip-ping-infra.git
   secretRef:
-    name: ggithub-deploy-ping-infra
+    name: github-deploy-ping-infra
 
 ---
 apiVersion: kustomize.toolkit.fluxcd.io/v1
