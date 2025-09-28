@@ -62,7 +62,7 @@ metadata:
   namespace: flux-system
 spec:
   interval: 1m
-  path: ./src/main/deployment/prod
+  path: ./src/main/deployment/overlay/prod
   prune: true
   sourceRef:
     kind: GitRepository
@@ -84,7 +84,7 @@ spec:
 #  namespace: flux-system
 #spec:
 #  interval: 1m
-#  path: ./src/main/deployment/dev
+#  path: ./src/main/deployment/overlay/dev
 #  prune: true
 #  sourceRef:
 #    kind: GitRepository
