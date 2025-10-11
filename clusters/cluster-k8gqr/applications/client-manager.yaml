@@ -38,28 +38,28 @@ spec:
   secretRef:
     name: github-deploy-ping-infra
 
-#---
-#apiVersion: kustomize.toolkit.fluxcd.io/v1
-#kind: Kustomization
-#metadata:
-#  name: cert-manager
-#  namespace: flux-system
-#spec:
-#  interval: 1m
-#  path: ./cert-manager
-#  prune: true
-#  sourceRef:
-#    kind: GitRepository
-#    name: ping-infra
-#    namespace: flux-system
-#  wait: true
-#  decryption:
-#    provider: sops
-#    secretRef:
-#      name: sops-age
-#  dependsOn:
-#    - name: ingress-nginx
-#
+---
+apiVersion: kustomize.toolkit.fluxcd.io/v1
+kind: Kustomization
+metadata:
+  name: cert-manager
+  namespace: flux-system
+spec:
+  interval: 1m
+  path: ./cert-manager
+  prune: true
+  sourceRef:
+    kind: GitRepository
+    name: ping-infra
+    namespace: flux-system
+  wait: true
+  decryption:
+    provider: sops
+    secretRef:
+      name: sops-age
+  dependsOn:
+    - name: ingress-nginx
+
 #---
 #apiVersion: kustomize.toolkit.fluxcd.io/v1
 #kind: Kustomization
