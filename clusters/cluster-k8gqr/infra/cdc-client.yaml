@@ -6,7 +6,7 @@ data:
   known_hosts: ENC[AES256_GCM,data:d5HDC2GiF/BtukELCG9ggUCXLMlFMFTYyGKEjt86aWEE+wX5NqFJDuKj0AsanwsebhcO6h5xoFOB3KsMczJN+D21DURYiLYBPvxd8AYtxQMsxntGoU0YeU1Z41/gtVkNht7P9pu+uui4nEI6e990g5yqAWueLrTWeL7JwtsfPkA973TxBdHOBLkMKmS55n4Cj01Ib85cFHzWDv4s7OeV86DsT4bd3nTUYBOIgN8Vl366Fk3KaXW6E8XGQiJN7JddONWMK+SMmWjZPlfc00kH7I75+1/EatfqUv3zyOEInGS0qjCQ,iv:fbNy5Bq9hF/EfOsLN3BOjPKwdYqI2TP/W2SaPgkQv7o=,tag:LkFfzZM+8wrwWHKSvmfoWA==,type:str]
 kind: Secret
 metadata:
-  name: github-deploy
+  name: github-deploy-cdc-client
   namespace: flux-system
 type: Opaque
 sops:
@@ -38,7 +38,7 @@ spec:
     branch: main
   url: ssh://github.com/enschede/cdc-idm.git
   secretRef:
-    name: github-deploy
+    name: github-deploy-cdc-client
 
 ---
 apiVersion: source.toolkit.fluxcd.io/v1
@@ -52,7 +52,7 @@ spec:
     branch: dev
   url: ssh://github.com/enschede/cdc-idm.git
   secretRef:
-    name: github-deploy
+    name: github-deploy-cdc-client
 
 ---
 apiVersion: kustomize.toolkit.fluxcd.io/v1
