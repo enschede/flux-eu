@@ -1,28 +1,29 @@
 ---
 apiVersion: v1
+apiVersion: v1
 kind: Secret
 metadata:
   name: github-deploy-ingress-nginx
   namespace: flux-system
 stringData:
-  identity: ENC[AES256_GCM,data:4uQX5tXe7PgRqshOqpgwUU9NvJnmBpaSC1mv1OT+DR+5cB3kRmzbAILpyIqmMU3jU7XDLPoB7syyhDqHvg15hixa8HOLE2jW0AGgBhWCXn96qEcqJirRC+ZpLATg0MWEv89PY7KMvWsX9qryzsRwbSAV0vAmZUx8/RzeCivx1p+ZXxWAvDf5knOFif6lrf0kFLywDF+3xZCLRhj8J/OYa/lm6z+pwyM7O55cKxSVqbaphFJcAwc8R3jgfgbYYTINcBNe0Wl5EM+DXmbem3LzXngRKXkKfldDLuiLvvKc1bReMQXq0hm8YLuJPLh0IoCchSCayknAWLcx/hsA6sLgiP+rlRr8KhtqVuTjzlwnvchnSSqhgTIet0lUub0YDaYU+FY6SR952GeEKHWAinUBF7BXOKZcyKiWW23wvX9xWlpYlxtyFm8a+2EN7MnUtisHy8IGJyFH/jh1Q+XwVbAMOtypn9iJKdCNf+VFkWpVqsvjRRuyEqIa15+6v4TzODko613kDLmIHqTkyRdllXzATzG7MO8iNDaUBUBxlUY0Id3ifEo=,iv:xlUxejBf/z/3nv2+uWv8sNIPFRKye26jKzQS+1fYylY=,tag:OlKofTOTM/mYctp4NleKdg==,type:str]
-  identity.pub: ENC[AES256_GCM,data:5It1Sd/nOS9dyR7schov/imON0zJ0kCq7Y6Dzkk/VVwlFa1FiYno2xmlFg9DQ9QSck5KXDHiSR8JJrX8+wAar7Ba9g/mfFwVw8dDIef9wDjG,iv:ndZ6gkKEB/dLwTEWk3kM8RhEgZ6EjnIcDQwrriS2Exg=,tag:urvWZ7/PYZWYfPgAe8xvnQ==,type:str]
-  known_hosts: ENC[AES256_GCM,data:03MqCwUC+Pmd+dh5i5fF9SHdikOKmdMZcSarDlM2Phc5l9GzShrQYRzh3A49IIWtQ883M65WQw7DuKt/3dNNID/m4sus3PyBzM3TlUWHLCBaEJa1q1SBRRt/HWUiBhoeXRl3m0EvPDTUuMv8KJphajVwXzKIUvviqjFAT/trYp8nEI9ePiZ1/gSWMIP7cIKViZmMC2dFW+Nb/VZONybadH1tmVTqKnSJ7zKt,iv:AYGAYPIQSOtS2ILs56pzruAzBdQAAtSo+hMILPK/3yI=,tag:/9l32OM3wAxZcLXUnHrxwg==,type:str]
+  identity: ENC[AES256_GCM,data:ybPFvPJ70EpgjXWa9edY2b+LxjkviJUkq039M1vVD1DS0LEyyOHdy12O5uJWdTE3JaPK1eoH8QjL/1Ve/O4JEstQxiH5XFXmnrl3p4XXGKNmIUbOi2zQ4wWk3e7NJGRW6gXvh35s66aP1JUUyaNMwLigf/B7cwCUOW9uQ73ot94U4H6PI4d1uSg4A5al+C+Dshn7ugfCrDz2lQX2D08FWgpkKqq12/VDs8M1/eVh7ED7Uf2fwfpQ5h9in1Se/D0Q0OqfoPgumEytnWVkpJA5ZXL8UJSycZYs16pTSpUvaNrmaz+0W3rpnXLkZ5yRSbETlVsAXep6JmGhCjTw0SVihPagw9ycAh/Z3PLHXnI43epqifChCPQLVO/YMF85adTZhs39PbzHzrRoh1f1TlAC7dJlkl/AOUWYUOwsmqcYO43RsMEJRlDtqRWW2audlXriQJ5g1L509pqrc9gwWdeCOT2xxm9/wFwhOXi1c7CJ3VUYXeGm6iSCG9ofize6NAraJ0BoO6uWc4f95FXJGRgBZ0Iyx8ktCi9sG1/uZ6sa22/lHFU=,iv:RmVTrHG7klT0Ihuew47y6s2DSsLk8jUQ4asVmMXqGzU=,tag:Fu+vQCZ21G568JZtC9qvzw==,type:str]
+  identity.pub: ENC[AES256_GCM,data:QqiFwc3EgNo/WEUA0UcavQNxbfXMLMbu+Etljj1YtlReyhwouJvDQ85ODJ68tbwwFQvhW+HpjZw/rs9LEn9iLPURaooFuHOpScCU36Ua4IHw,iv:uNMT2OL0kJeFpuMSUyxH5Z0MUXlJSVWTLrEdSU6MHko=,tag:nX9u6uQecAy0wgg/YFz6gA==,type:str]
+  known_hosts: ENC[AES256_GCM,data:2qKIFBi0bO007GxZJAcDEByOpl35ZD8TGN6V9+Fxlbt5Mb+08AcqQ3PupHxZvTwr8Kv4/moIMyDyXms0uRZmPijT1UNMuqtmGWSyxiirn+HHqlLqSd0iENQcOoOFK/mKXpiW+Lhmhrqy5LtCF4KzC6qylrlibBveNaKlXNdtpDopmS2hzoXomI/bSr6ZHoKfm5s1GXZYh8rK4+Y4xTjV7f0tLLLQNzP5Pu/0,iv:lUlrn0wqcNp6CC7QQ3ZNC3+NGM82NnchLptnzTJVW+E=,tag:UiYmRv+iWgdWD7YHdrfhgw==,type:str]
 sops:
   age:
     - recipient: age1spe3avhtcgkgqujprtujackxw6au5h8tum6nk6czmxgaclprx5tsz9jrhr
       enc: |
         -----BEGIN AGE ENCRYPTED FILE-----
-        YWdlLWVuY3J5cHRpb24ub3JnL3YxCi0+IFgyNTUxOSAwVXVHcnhpSENhNnZlVEJp
-        bWpGakt1aWFiU2M0c2M5Y1Iyd0lUWTVBWENrCklVcE5kL3dRb3VSajlGNEpyZ1Jr
-        YlMxOGR4aHdDQ1RsdEEvajVJL212Uk0KLS0tIGNUM2VOS2UrcDloalFUVTVETk9P
-        cnF1dmJBRW4wYnNrcTVhM0FWeDlUajQKuTCfgJsKfMX/Zw1TQ35pPkhdghB9xmSo
-        AlYjMBbpDUC70wRMNgJ8hxLh3PKowmabsBzoHdyOLRvQMHlbpOe6Vg==
+        YWdlLWVuY3J5cHRpb24ub3JnL3YxCi0+IFgyNTUxOSBucnowWS8xVzZZK3hxN1E4
+        M3lnQTREdldhRzUrV05sWkI1bHZGUWE0U1h3Cjl6NFJCMXIvczVabEhVYkRZVFlv
+        RHVWMUQwQXBJdXFpKzlNdUZNUE5yaTgKLS0tIDlHVE0xVXJIblJBcG1TRmg0NmYz
+        M3BMaTI3eUc5OUdqOHpodk9uL1BvNEUKfOUwQ2235lqVRBSqVkY7q2ub9GXRjznu
+        rzwE9g1DEW/Y8oK8ZnUna1ZBh3CislKcF5skJrW5sXJi+bF5dpG9Dw==
         -----END AGE ENCRYPTED FILE-----
-  lastmodified: "2025-09-25T16:55:51Z"
-  mac: ENC[AES256_GCM,data:2DmYYHTo2q3+O5Shc4sXgVL8l+htVxhJSexW1Nn/ZddcOESqEQhomspiN1+ZP/R68mEcpD6gRFSxVrzpugbLZ1UpyHvVafhv9mPxtSMPjGD9Eai4FygEKcV+AVMwNYibtP+IQUjMC82l0g4Gso9LdxOooGrLiO6ZKr8SR5aq3jk=,iv:VC6jnePaW2xy1XzIpK8h8gThxYWjH+DvdoCLK+eHVdY=,tag:L4XyZFYWMciGm0McqV64vQ==,type:str]
+  lastmodified: "2025-10-11T11:00:21Z"
+  mac: ENC[AES256_GCM,data:R/sROBt4f7eKj5c9DOUH19tQkP3w0EMSJCaATD3QbaUMQSRypdNOdKKzBgHnsN09tY/ZagoZJWJPR9nHbkcKQFoa6/KB//oQAfWuqA24WMSykQKsh3YnWbCmo8QnCPqPngDQEXaHhVZ8aEEgmfC+l2DUr4Ra0bhydS0sFlA/XEU=,iv:fxnpJkkQcxpFmzK4fptzUG/C31Nuq67C8tHAsnnJnqo=,tag:WTNBGtDiEPQ0B9ZipuY5cw==,type:str]
   encrypted_regex: ^(data|stringData)$
-  version: 3.10.2
+  version: 3.11.0
 
 ---
 apiVersion: source.toolkit.fluxcd.io/v1
