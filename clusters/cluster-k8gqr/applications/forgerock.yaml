@@ -1,0 +1,69 @@
+---
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: forgerock
+
+---
+apiVersion: v1
+kind: Secret
+metadata:
+  name: github-deploy-forgerock
+  namespace: flux-system
+stringData:
+  identity: ENC[AES256_GCM,data:/mcWNPj4YTyR2wvce8wIZV38V5D33ewrS8QqoPa1FQdqIFdMxJqJ82P7b4G5mW2o/rlQStYJ+vpQkYlzJE+dqjKpQVz60qVLV29VJkccO9fU8GlcDaMSTsnomzagZjPidpvtTcgrVNJv7unCG4xeOS+WDV6ZUPmgTC/D8slLrNKyEg/AdKfvTq8+hCqhKB5Mjv1cdfbwrUsTQ54p7U2nVJQYBWa0vaDYrpNEz7SNwz9b2lCmfbyupVdC6N/YNb6/IYCeh6VqGpssqXgMVmd3eFIlS4nkhkkm0Dk4G5J11BvR3ZEui8p4OwUKJbvHNfpsqIgen0QqsumyX11sUtn0wnz0G9NUnDVd76GRi50TvNJ7nFSugpXt3Y24oaBvx3XEmB3UXlC7gF6l2/X3jTT9pK9fy9nYZJZscX1q6dP7UUoNHLFaqf/IYFhbZsPPAQWnfgbIi1A479XuwYHWjYLIET61jHNRqy8yddJURr1ZvkI68agdC7Q4ukr8Lw0dQUeIzrHxaJRPCMfvUJFg2NdQjf//T4/oU3hSASlQ3YhceEQmiPA=,iv:9MHvASWLW88YW2O3jQVngbmckTzVKmq1y464J0hWZnc=,tag:Jwm09vzoXLJn+e/fBRvnJg==,type:str]
+  identity.pub: ENC[AES256_GCM,data:N9cOd8dmX5DJLyODezbDw4ADVDaeiZCOMAMxAcECyUusP9D3CDGAmhb23VY4Sglei852WAZwafVhUQ/KvWCwc0Yt4ZSjFNu/nOFMdrBxij3T,iv:1dKsrSmnnsbpjtda1JiS39G+ipZQJXk8D7XCr1E01z8=,tag:pjg+WLpUqRL8ogeuKS2yXw==,type:str]
+  known_hosts: ENC[AES256_GCM,data:3fUlGdpGbF2yA95QjUjgpHbBjBoquv4tcUT9smT21AXvvIsDJ9qGRQyTUQ5v3/HZ1HCNLBaH9n3K+Vktg93y1Wu69/1QqNirYzIY8PoJny7D6f+yxJGtB4obUac8GO2SYTIIYk2S9AQRFNLU80bSqTrWvRmUqMpKtZLCnvWQKN9Eq3I0aWfEa8MTF/NKnhvVYCDz6bz49nm+qFgxQvypMZF7o9nQ5cPDvQW4,iv:pR3L/6XpkSXElfurdH1DAnpUEk6nE3XJwoCdrtKSTQI=,tag:/7rEZBpyKQlvzQqLwzOWcA==,type:str]
+sops:
+  age:
+    - recipient: age1spe3avhtcgkgqujprtujackxw6au5h8tum6nk6czmxgaclprx5tsz9jrhr
+      enc: |
+        -----BEGIN AGE ENCRYPTED FILE-----
+        YWdlLWVuY3J5cHRpb24ub3JnL3YxCi0+IFgyNTUxOSBKRWFyaXFLdmpIZVBqWU1u
+        TzVqcUEyTElqeGZ5TlBNbDF1dndjQ1I5ejNrCnBqcnBVb1RpbkRaU2tDY0ZiVGJY
+        V0VqeVhEQnRDVzFTYVhSeHpPZUZNSVEKLS0tIEhyVCtPNCtvL2E4SkxKak5KR05Y
+        TVZlU0EyNGd1WldJQmZSM3NGdWlLaWsK4z/ScDImzq+hAahHuD7BjD1Q62Nsk76B
+        RwXBaSIpCwq1DJh6EFUsOMwVQB1o1KYBbWTT2lsoZZzvsAw01fqEDA==
+        -----END AGE ENCRYPTED FILE-----
+  lastmodified: "2025-10-12T09:51:25Z"
+  mac: ENC[AES256_GCM,data:e/mnV2ynn3NsHzfbF5zrHv6CWsLUDHMYXA7Bu0/yq4Lrj3glTvkJqaiDNmwcwnkG7HgYxOLEYL99ts7A9X2St20qWIoutNsGBiFAOZ6ZICYLpFnw4H/UxxcnShy/aTlc3piIFL06SK+d2n8sgxY1YNbBrB1OybiXmWVCuxAqf2g=,iv:JL3c4S3sixiRSNZzRl6DVk4qnvPLrJtmwkDtX2/vOJg=,tag:Bdd4eAEtWYwVpeGGWR5vAw==,type:str]
+  encrypted_regex: ^(data|stringData)$
+  version: 3.11.0
+
+---
+apiVersion: source.toolkit.fluxcd.io/v1
+kind: GitRepository
+metadata:
+  name: forgerock
+  namespace: flux-system
+spec:
+  interval: 1m0s
+  ref:
+    branch: main
+  url: ssh://github.com/enschede/forgeops
+  secretRef:
+    name: github-deploy-forgerock
+
+---
+#apiVersion: kustomize.toolkit.fluxcd.io/v1
+#kind: Kustomization
+#metadata:
+#  name: forgerock
+#  namespace: flux-system
+#spec:
+#  interval: 1m
+#  path: ./kustomize/overlay/default/kustomization.yaml
+#  prune: true
+#  sourceRef:
+#    kind: GitRepository
+#    name: forgerock
+#    namespace: flux-system
+#  wait: true
+#  decryption:
+#    provider: sops
+#    secretRef:
+#      name: sops-age
+#  dependsOn:
+#    - name: ingress-nginx
+#    - name:
+
