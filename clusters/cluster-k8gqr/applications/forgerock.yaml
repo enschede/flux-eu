@@ -39,7 +39,7 @@ metadata:
 spec:
   interval: 1m0s
   ref:
-    branch: main
+    branch: marc
   url: ssh://github.com/enschede/forgeops
   secretRef:
     name: github-deploy-forgerock
