@@ -64,7 +64,7 @@ stringData:
 kind: Secret
 metadata:
   name: worldofciamnl
-  namespace: cdc-accounts
+  namespace: forgerock
 type: kubernetes.io/tls
 sops:
   age:
