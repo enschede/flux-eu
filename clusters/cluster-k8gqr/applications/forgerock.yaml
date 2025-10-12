@@ -37,7 +37,7 @@ metadata:
   name: forgerock
   namespace: flux-system
 spec:
-  interval: 1m0s
+  interval: 10m0s
   ref:
     branch: marc
   url: ssh://github.com/enschede/forgeops.git

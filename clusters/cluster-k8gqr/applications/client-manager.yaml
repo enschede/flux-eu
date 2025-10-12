@@ -31,7 +31,7 @@ metadata:
   name: ping-infra
   namespace: flux-system
 spec:
-  interval: 1m0s
+  interval: 10m0s
   ref:
     branch: master
   url: ssh://github.com/enschede/transip-ping-infra.git
