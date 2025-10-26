@@ -5,7 +5,7 @@ metadata:
   namespace: flux-system
 spec:
   interval: 10m
-  path: ./infrastructure/storage-transip
+  path: ./infrastructure/storage-minikube
   prune: true
   sourceRef:
     kind: GitRepository
