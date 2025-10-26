@@ -92,5 +92,5 @@ spec:
   dependsOn:
     - name: ingress-nginx
     - name: cert-manager
-    - name: secret-agent
+#    - name: secret-agent
 
