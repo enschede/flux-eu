@@ -1,0 +1,99 @@
+---
+apiVersion: v1
+data:
+  identity: ENC[AES256_GCM,data:BDdqjyPLIMIx4DhRDal4sZUKekyRlDoL/gRxMGyU59xGAjW1RN/ZfzLYApz38kQV0OcN4dA+tk3U1emWMZVyoenj/2oK5nBueoyppWyo3FqqRV6yOvN6uvsZF84H4btqn47VbvCFAN84XqtD5MM/51YT7Q9sZ+I6CvZGjfHGOx48/4pOzTGTDIOPbLBvt/HVrLmTRz3HATi1TjLdkouKZJiasZO+UGzKOUWd1UhOjZSO++ma6XxS/PuIaLYNl7HhkBjwEwWD2T7E4EWY84ZG6fmwP3ISgEsASAIg0sUz/JvBiI8TBRwi7rKhIpoKjg/5RPqU+ZQfapoUKn9VN6aemJAG7qw596VIECrlW5oZySEvwuswwOfYrvIKbNiUIgguPKdcb/DHuw9J3Si1qzrFICXoc8PBgebDCvu4PDDJlh2k7mWnSp9kebkmrQ6vLuRnkN59LNj9kHwvt7mBn4djzC+DXQGb2U4jtliY+3IRlklm3jWByF7siObCMm6/MOhnTgOUTg2Hosiod/BU22oBsq0wgcRXMft9bPxOgHb1W4ztHITW67VxIcbO0z7H6JqGS9Mq9NmnIkkzJglwE3CCrD4splOKbyT3xSbXSX5HeVVfzge2EP+OIVKMS8uDpExz7msJi7XXFSTBy4K0j+YvwveFBSjAJHAirIN5OA/LCB5YhB9adUQxPoV+YgUbOnzcgZOa+LvvB/WTuZEuXFJB3qcBCnboa12g58h12ZA0SRo=,iv:ZS1TXvWikLkhKKBMNAGOmXNedSj3IFBqPacKa2pw0hQ=,tag:qXQhVQyaAARHcQCnhYzMXw==,type:str]
+  identity.pub: ENC[AES256_GCM,data:eT4Rsp4dB6RWaM+yJCLOhACiPZmEftBFAQRUiygFYGpLmPFMDk63gu6Axp4qPgeLFXDlYqolOnTkqUuga6f0xEpucBVZqGXeYWNKJQQh/6Tbd1R4unX/FIA+N1co9pk0grobX43e06Xlh+ku,iv:aXulte14/rEZXRkCDHRLpQlK0kIBoXtsdsies3hbJa8=,tag:US0eu7mwlu7TqffBkUVYEQ==,type:str]
+  known_hosts: ENC[AES256_GCM,data:d5HDC2GiF/BtukELCG9ggUCXLMlFMFTYyGKEjt86aWEE+wX5NqFJDuKj0AsanwsebhcO6h5xoFOB3KsMczJN+D21DURYiLYBPvxd8AYtxQMsxntGoU0YeU1Z41/gtVkNht7P9pu+uui4nEI6e990g5yqAWueLrTWeL7JwtsfPkA973TxBdHOBLkMKmS55n4Cj01Ib85cFHzWDv4s7OeV86DsT4bd3nTUYBOIgN8Vl366Fk3KaXW6E8XGQiJN7JddONWMK+SMmWjZPlfc00kH7I75+1/EatfqUv3zyOEInGS0qjCQ,iv:fbNy5Bq9hF/EfOsLN3BOjPKwdYqI2TP/W2SaPgkQv7o=,tag:LkFfzZM+8wrwWHKSvmfoWA==,type:str]
+kind: Secret
+metadata:
+  name: github-deploy-cdc-client
+  namespace: flux-system
+type: Opaque
+sops:
+  age:
+    - recipient: age1spe3avhtcgkgqujprtujackxw6au5h8tum6nk6czmxgaclprx5tsz9jrhr
+      enc: |
+        -----BEGIN AGE ENCRYPTED FILE-----
+        YWdlLWVuY3J5cHRpb24ub3JnL3YxCi0+IFgyNTUxOSA3cm5ZU3lDek4rS1BrRWo1
+        UWhVc3NEcnlZeVRJajlpVStHdTV0cFNJN0Y0CldvSWU4eWV3emVEREdya2FBaWFy
+        VndwYnNJazc3Y3ZScGpuYzNNci8xTUEKLS0tIGtiWEoxWGtDR29EdGt5ODR5a0dO
+        ZnJQV1hLdXovZyt1bTV1c1JRVWdvMHcK1ftiVMAhvZRnOyDo3ZZxbvqcchZmb8Rd
+        RsajeCCR9DeKs8fdU0hY5E6R2p1nfLslJ5ejZQB4wAmqIMxNa0xpIg==
+        -----END AGE ENCRYPTED FILE-----
+  lastmodified: "2025-09-24T19:41:28Z"
+  mac: ENC[AES256_GCM,data:Tj1ArYhlK/MN/aI7JvRfifrAS718duFcXHxthWKrUjqiEP3+gpYKinLMH8dnR5BBCSoVPSjIXRRcfPkIrdAHLkHloSzDM+K6JXeZI/DJGX7UAIp5RUHLxawr/HGdmrG4L3/+YOGDH6Jz4KvppNbfDY/ctEZ9EWMpkifuLITmxe8=,iv:qTjCBbbUTDA7vGKnDrSoU9XQwLlS7ZDTwmThBxRdn04=,tag:rgIn0y6mwDleG9KtTMaIjQ==,type:str]
+  encrypted_regex: ^(data|stringData)$
+  version: 3.10.2
+
+
+---
+apiVersion: source.toolkit.fluxcd.io/v1
+kind: GitRepository
+metadata:
+  name: cdc-idm
+  namespace: flux-system
+spec:
+  interval: 10m0s
+  ref:
+    branch: main
+  url: ssh://github.com/enschede/cdc-idm.git
+  secretRef:
+    name: github-deploy-cdc-client
+
+---
+apiVersion: source.toolkit.fluxcd.io/v1
+kind: GitRepository
+metadata:
+  name: cdc-idm-dev
+  namespace: flux-system
+spec:
+  interval: 1m0s
+  ref:
+    branch: dev
+  url: ssh://github.com/enschede/cdc-idm.git
+  secretRef:
+    name: github-deploy-cdc-client
+
+---
+apiVersion: kustomize.toolkit.fluxcd.io/v1
+kind: Kustomization
+metadata:
+  name: cdc-idm
+  namespace: flux-system
+spec:
+  interval: 1m
+  path: ./src/main/deployment/overlay/prod
+  prune: true
+  sourceRef:
+    kind: GitRepository
+    name: cdc-idm
+    namespace: flux-system
+  wait: true
+  decryption:
+    provider: sops
+    secretRef:
+      name: sops-age
+  dependsOn:
+    - name: ingress-nginx
+
+#---
+#apiVersion: kustomize.toolkit.fluxcd.io/v1
+#kind: Kustomization
+#metadata:
+#  name: cdc-idm-dev
+#  namespace: flux-system
+#spec:
+#  interval: 1m
+#  path: ./src/main/deployment/overlay/dev
+#  prune: true
+#  sourceRef:
+#    kind: GitRepository
+#    name: cdc-idm-dev
+#    namespace: flux-system
+#  wait: true
+#  decryption:
+#    provider: sops
+#    secretRef:
+#      name: sops-age
+#  dependsOn:
+#    - name: ingress-nginx
