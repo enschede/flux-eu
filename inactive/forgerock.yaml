@@ -89,8 +89,8 @@ spec:
     provider: sops
     secretRef:
       name: sops-age
-#  dependsOn:
-#    - name: ingress-nginx
-#    - name: cert-manager
-#    - name: secret-agent
+  dependsOn:
+    - name: ingress-nginx
+    - name: cert-manager
+    - name: secret-agent
 
