@@ -20,7 +20,7 @@ metadata:
   namespace: flux-system
 spec:
   interval: 10m0s
-  path: ./clusters/cluster-k8gqr
+  path: ./clusters/minikube
   prune: true
   sourceRef:
     kind: GitRepository
