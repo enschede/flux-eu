@@ -91,6 +91,6 @@ spec:
       name: sops-age
   dependsOn:
     - name: ingress-nginx
-    - name: cert-manager
+#    - name: cert-manager
 #    - name: secret-agent
 
