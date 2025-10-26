@@ -12,6 +12,3 @@ spec:
     name: flux-system
     namespace: flux-system
   wait: true
-  # Als je CSI-driver elders deployt, kun je dependencies instellen:
-  # dependsOn:
-  #   - name: csi-driver
