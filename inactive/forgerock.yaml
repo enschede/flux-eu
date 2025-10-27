@@ -93,4 +93,4 @@ spec:
     - name: ingress-nginx
     - name: cert-manager
     - name: secret-agent
-
+    - name: ping-secrets
