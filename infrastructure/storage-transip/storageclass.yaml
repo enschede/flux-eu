@@ -5,6 +5,6 @@ metadata:
 parameters:
   volumeType: nvme
 provisioner: bs.csi.transip.nl
-reclaimPolicy: Delete
+reclaimPolicy: Remain
 volumeBindingMode: WaitForFirstConsumer
 allowVolumeExpansion: true
