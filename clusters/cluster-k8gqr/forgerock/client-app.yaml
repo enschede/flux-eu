@@ -33,7 +33,7 @@ metadata:
 spec:
   interval: 1m0s
   ref:
-    branch: master
+    branch: main
   url: ssh://github.com/enschede/OAuth2ClientAppDemo.git
   secretRef:
     name: client-app-deploy-key
