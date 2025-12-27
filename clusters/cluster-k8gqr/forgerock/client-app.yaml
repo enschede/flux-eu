@@ -58,6 +58,7 @@ spec:
     secretRef:
       name: sops-age
   dependsOn:
+    - name: ingress-nginx
     - name: forgerock
 
 
