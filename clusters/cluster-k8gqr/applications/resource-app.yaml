@@ -1,0 +1,63 @@
+apiVersion: v1
+data:
+  identity: ENC[AES256_GCM,data:rgvOZVEgyYIQTJ7078CDg0H4wG0Ds4u9qYC6/ggdoJx6B5vssut3o8ud2eBe3inpS+J4fMt9j/hz4IAhrCMr0+YsC5pCkvVWZx/3rzJt7i1hLxMNWo5ei48hdXIK1uvATN+HyDYXYqIxgjkUZkj9yT0ShKxbp77LuOyfS7gEQCBlhf5oCsffFYESKmWXHV8QMcpax3LBAw/f4A7s7e6qF737yakvgBW+bgBrvQRiO5sfxXdiB1dJByrDSt5Oskeq8IDahRXq9dHi0LDi8otBH9F2bdhL2tCSu25hwFmWLTKXwyB3+e6GgkwGcESNtz7thZBvDdMl+80qPyDenKB+72tXPuVDnYlaMHM5lL+u82M7HGeyztAzvlK3Dv6n0ZJtt/AH76GNidfx5wCWfIAtpJZLsXNXaqLVtM3rWW4L03Ju2DbeEUe7B8wnl+4o+aC2bIB1ad9NoPYbUpD3JagWKy1KOhj28NoK8/T8CEy7keZZrVgyJw5T/8femMFOfrKBsk83OgSNRziGk5+U1s6qMdgmOByMiazs/YCsXc5d9GsOj4vavrBR62PLMr9SSjLkoulHYSLdVrFUeYFnanhAWk39/fM+7wXuXkxR7Lxrqkd24SOQiXevmPgOeUSallsH1xxnz7s60NIfDh+7WlmzeQxxwROuyTXEOrShhGnzpKTaVQrZZcw5uXTTvYK5cui55SJ/q1uhqmR7nu3XAM2X3RhCOztZ8U3sbjC80kSJcqwIgc7JU1zuSfW+i0pW/BC6,iv:jh08IAfhTms5YIZXJhCitl0yjc5pvMW/ZdXBQ+vkB1k=,tag:1I+RWkMElts6GQddixCrDw==,type:str]
+  identity.pub: ENC[AES256_GCM,data:b1Jhc0tsIuTBwvVWq0ugU58FJguvSI0vY/H3UIK5Km9OwdIfidOfO4tgmNtNsP9rjqO0qnCS/EukJCUzuDeSIpgQRlgJXsWvjhn0YWabRHNjEEB/MHAWRomK5IZoemFaFOAcmNWYSHQ4ZK6wEkmP5+jS448ApS2yTwxLXTRSRuiSseYqum9L715aX9zqFz84uxHADL+d/7M=,iv:zYAfL6nvDGw1e6yIAjk6oXnZdIJ3H6hhIu1HA26J8Cg=,tag:rJ6YKaY3jN8ppnxGEgA9PQ==,type:str]
+  known_hosts: ENC[AES256_GCM,data:j6Vo0fZElFTdJ+Rgd4372kGVgfyrSweutsdrmPh9GHee5GbHVfpvbDusIctfI7Zkuq8S9bL7q4sHc/QdUpibRioR5skbtMapU1XFPuESMi3nXg5aqY0vzTQZ3+S9D7PBcMNOSeIXxtEsTzJK5aT5/q2Oc5n2DJzR4oCO9GJmQRAfovwd+/ouI+i2V7pBI8IhqOYY5SPmO5n/O3ILoUbr3qJD/jmJrp2yTCulAiFPrJLph+hU9zPwpi5qEYUa5S29ptS7AO6bVch99dB5WV1EwL8vv4N6u4f+0wbASOpS/J7Q1FDwLX/5csmuHV3TraVVrvMq/tisUyFn3S6I13m+VBhWBgrZmIhIEYh60ca+oj5xMWK8UfGyO3sDowit1c/mt02XPxjmZOoZ1Yg+qedOK1iRGZLAru/xNpgcVKbriLH5ksMFIm1f67wlm8Ac+l5LVH1+7OM7e6k/gQAm00I3eEr3en6v9tgI/qd4o8REEgb+prfwVaUtt201T0yhJwpvinzPty6mPM6OOLeXJNmKjRZRq0ujyKolgE7AtUkNafLqcUUjx2256ZcruKLxoJpKSDXKqBdE614xfaIoklRkOxqBzd6sG65INAjxsSJVGdBKHfj1bWw3kIBDl5g8WJ5CKyTjmo5M8deoWDH9bbar23YmoxNmO7OVMcU4hu8UDMSVdeSoDBUUCDWroctL8QPxSqwWmieigDIzFbGk2X6Ki32FNiSDr1uFnOXppYvqf56yXby7YDQE9I7TanvsQgRkdioSi7qR6+q3Gia4vMVz2XFmR7W0MpoOSiovPlZuqMh1n3zze+B70Vju971Kh9jOqbPNUNuFXEBp4JhKeBU11M7Hzj65KByDLi2i4EqRUyTVz2dDQBIBLmyFC+95HA0LlkIUF4JVRWTOCn2QdgJLK8yl8g0+H/ud6rZiONdR+Dm49EZiYKUq+D25Nq85/xsIHytZCdkWCXDN9KfGAMjK/0/ly/a/dPMsjBruEQUmeXVy2lhWhxrExs28aVIUcc8/LEUUXASNV/bbDECzVcF8owjt4Wh7EEkiNTPSaQ1T0IrPDzafQiss15IJdw6UOuz5QRkX9VnLwhNRUTnpLGdt9w87qprUHajEkF7fBS2oVCGWNZ1pq8gAt+xrBpJfP2KRTzC83R0XPYOdcehUcSfjzGxsfw+VLHUCbFSda+7Wsl+NBIIi/munniH8jVgOWiqK1EEWF2fBo0JFMLcQAR4tTPZ1jaHFU8JwDmDdTJpmEgQ+yr2id9mvPE95lo0jH+UmJKUAupnCFe0w4OcJlnHmujH9bb+OShrTF6uNh9e9DoXIyRkZu62+EXIzwGnXFZm/Ux4OyOKuKaXLcM+URKMjtQVi1ibt+8zt+dHA56tQE8FLEWrpsOU/HEhKZBSl5VDmz4h/J6WK4E/T1lcOxPW7lucmfC0K9Mjlfm3+bOc8yMevYI8x+DBK7zFhHTljfnpcjcbDwXArE45V21BCI8wMf6L22BJbrEBaOP4+PCb7ihIiuOWwy3d/JfGefxhlRAalZGpOO8TIiQ7D/nI4VfTKWAvv+V5gflUg6Q/02XV/9hKtI2J8nn3m320qOGVLwM7lrmCGEngtwuMY6Jd7IeBgV8KHjJ4AcoiFuNKmIh0CgK1INJEncVPO0/uZRwwbSZXZlvNdHPVHWxxA2+QWdyBujd6F+mVjs/tw9a5fIYKKRMgUFofQfkxgxHxF9r1cnfFdHf7EnuMjGLQWs6rto7s4ZtEX0HFWFvUQ,iv:LdOTua/hCtZD16tr7miZt+UvYm0ZhYOaCmkRORUkvJQ=,tag:qX5vfGy1n/GhYalPpwdLLw==,type:str]
+kind: Secret
+metadata:
+  name: resource-app-deploy-key
+  namespace: flux-system
+sops:
+  age:
+    - recipient: age1spe3avhtcgkgqujprtujackxw6au5h8tum6nk6czmxgaclprx5tsz9jrhr
+      enc: |
+        -----BEGIN AGE ENCRYPTED FILE-----
+        YWdlLWVuY3J5cHRpb24ub3JnL3YxCi0+IFgyNTUxOSB5UUV5ZGx5NGVXQnZ1ZFE1
+        bE0xbElFWlFYMzNacHdwdC9nem1abUpiNENFCk9mYTI3d2pMbkxSNUQwUU50ekVj
+        WHBNMWhENzBSMnVuS05zVGc3MER1TG8KLS0tIGxCMG1GYk5VWHphY1loalBzajZ1
+        UnNHSFZoclkyTGpIcGlmL0Vnb01YOFkKWGihQ7HdH1xwN4XoBQWvhPmNzdbwPtW3
+        XCMZT8D18vKh5fskcghl4R+TMQ8Lvco2LTQYCtEJU9Fn2ITFksHSEA==
+        -----END AGE ENCRYPTED FILE-----
+  lastmodified: "2026-01-02T12:52:08Z"
+  mac: ENC[AES256_GCM,data:Yyj8/9xF4qTXtM07CBPVXK8e8drLkhmOrvAq/nl2uPUZEMS0rPpNeECFYRDl5pwe2CrhpyKAp7uk0gdUQ8GTlYcm3QGwbuPlt4xhEMKlVCYitRsOZNYRzXbkgu0/Kr2VvtMM+C69cMiLWZfMdoBuKHC43Vtni301Ta/mce0f7q0=,iv:t+PWJhhe8FCj8dtvzdE2hLNERhlHYrdr3cQFZYHYVB8=,tag:6ftsjxHsq8Q+7KXAmwXUSQ==,type:str]
+  encrypted_regex: ^(data|stringData)$
+  version: 3.11.0
+
+---
+apiVersion: source.toolkit.fluxcd.io/v1
+kind: GitRepository
+metadata:
+  name: resource-app-git-repo
+  namespace: flux-system
+spec:
+  interval: 1m0s
+  ref:
+    branch: main
+  url: ssh://github.com/enschede/OAuth2ResourceAppDemo.git
+  secretRef:
+    name: resource-app-deploy-key
+
+---
+apiVersion: kustomize.toolkit.fluxcd.io/v1
+kind: Kustomization
+metadata:
+  name: oauth2-client-app
+  namespace: flux-system
+spec:
+  interval: 1m
+  path: ./src/main/deployment
+  prune: true
+  sourceRef:
+    kind: GitRepository
+    name: resource-app-git-repo
+    namespace: flux-system
+  wait: true
+  decryption:
+    provider: sops
+    secretRef:
+      name: sops-age
+  dependsOn:
+    - name: ingress-nginx
+    - name: forgerock
+
+
