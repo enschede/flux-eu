@@ -18,6 +18,7 @@ sops:
         ZDVweUhoTXN5Tk5ZUkFOaHNyQ3NkdlkK7gM/+icse73xMleuQtxihnGGo9/VoC74
         XQGBcYterzP9RISIeesdiH5QZNmRdLPxKp5gOA7xp8knc60RJWp1cQ==
         -----END AGE ENCRYPTED FILE-----
+  lastmodified: "2026-01-02T16:56:35Z"
   mac: ENC[AES256_GCM,data:n4ReS5jO7ntI/rFXw3V1EJ8G8qrT3GqVejDD1/XhRXKW5xhaVoS9wMrLkEjFxQgj2rtG2VtS9YCosj4oRk6+6Iy0aSpH/BNE4p5OYFhee1YoeMbl1TUhmBqzi7SEKY1LSM3cw1xj9AeBb8IA0CX6NXMW4wPWyUSI54Z83IUQ6rc=,iv:uXVbzEOAET2eX27giMv72U9v4mqSc3bbZXdLXj1zJ6g=,tag:DkBc86MT/yvBy75O9yho0A==,type:str]
   encrypted_regex: ^(data|stringData)$
   version: 3.11.0
