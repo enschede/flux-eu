@@ -34,7 +34,7 @@ metadata:
 spec:
   interval: 1m0s
   ref:
-    branch: main
+    branch: master
   url: ssh://github.com/enschede/cdc-idm3.git
   secretRef:
     name: github-deploy-cdc-client-3
