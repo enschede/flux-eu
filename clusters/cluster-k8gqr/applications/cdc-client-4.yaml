@@ -2,7 +2,7 @@
 apiVersion: v1
 kind: Secret
 metadata:
-  name: cdc-idm-client-4
+  name: github-deploy-cdc-client-4
   namespace: flux-system
 stringData:
   identity: ENC[AES256_GCM,data:IZXktlxGSRaZ3Sk/zRs1I7BisHgSYYmbZ13nllAljjE2XYUT6DW45MZAUB9xCveou83kn7ceYZr1pJLlGYWjLQbUE1hnH1wnFLsz7oETcqqzYJAkLdo1FE7InElz15Hq4aM++1xJ2yrLVAU16ztci90FSMFeK05O9CWruRG3UqJ/hfkuJdKEju6CvD7stlIExizh0ikWFHzjwWiwOu0Ba85IVO9cTiD9aBxEP0MdlEkE/PAQv0H7m4aNNsn7ZuNhppuIiMGlzZVNfEYdAqD2FBcYC7YsNh+299/KW0OENMbgIs+Jw1lyrlJrCFfYnbn5iKywuaY6jrJE9GVzoEeSNMU0nWcEVoFiZJeuM7t3CH0p2gC3oBosICgPuG2eJtvKYECOtvgNx3Onnjy3HOG1TPTKYZKJK6WZUxb1SEgtIOTwSeCmjtkd3GNgt8dmeGQCZ+HjR3roJNQTVea/X++STsXtt6MnyA2ezqtXPBPT1PsVjrAmXuF0PeTYerO2oeforxShQTlKMMB0gAOuiTiqm0TrYT3sMoC/ZGsoLkeEK8VcTgg=,iv:4voITOi1mccp1nlJL6McTv2mWlXYPbms7ZXCGDYp3fg=,tag:1SveMxQGpSxmKJiyzlkPNA==,type:str]
