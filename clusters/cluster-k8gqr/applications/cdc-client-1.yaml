@@ -33,7 +33,7 @@ metadata:
   name: cdc-idm
   namespace: flux-system
 spec:
-  interval: 10m0s
+  interval: 2m0s
   ref:
     branch: main
   url: ssh://github.com/enschede/cdc-idm.git
