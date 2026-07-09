@@ -15,4 +15,5 @@ resources:
   - helmrepository.yaml
   - helmrelease.yaml
   - worldofciamnl.enc.yaml
+  - amadmin-password.enc.yaml
   - middleware.yaml

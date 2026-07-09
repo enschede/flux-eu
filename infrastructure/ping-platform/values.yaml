@@ -9,6 +9,11 @@ am:
       - All
     readOnlyRootFilesystem: true
     runAsNonRoot: true
+  secrets:
+    amAdminPassword:
+      existingSecret: amadmin-password
+      passwordKey: password
+
 ds_cts:
   replicaCount: 1
   podSecurityContext:

@@ -7,4 +7,4 @@ resources:
   - infra/traefik.yaml
   - infra/cert-manager.yaml
   - infra/secret-agent.yaml
-  - infra/ping-platform.yaml
+#  - infra/ping-platform.yaml
