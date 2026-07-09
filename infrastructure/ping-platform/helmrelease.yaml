@@ -1,0 +1,41 @@
+apiVersion: helm.toolkit.fluxcd.io/v2
+kind: HelmRelease
+metadata:
+  name: identity-platform
+  namespace: ping-platform
+spec:
+  interval: 15m
+  chart:
+    spec:
+      chart: identity-platform
+      version: "2026.2.1"
+      sourceRef:
+        kind: HelmRepository
+        name: forgeops
+        namespace: flux-system
+      interval: 1h
+
+  install:
+    createNamespace: true
+    remediation:
+      retries: 3
+
+  upgrade:
+    remediation:
+      retries: 3
+
+  valuesFrom:
+    - kind: ConfigMap
+      name: identity-platform-values
+      valuesKey: values.yaml
+
+  postRenderers:
+    - kustomize:
+        patches:
+          - target:
+              kind: Ingress
+              namespace: ping-platform
+            patch: |
+              - op: add
+                path: /metadata/annotations/traefik.ingress.kubernetes.io~1service.serversscheme
+                value: https
