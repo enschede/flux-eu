@@ -4,7 +4,7 @@ metadata:
   name: infra-storage
   namespace: flux-system
 spec:
-  interval: 10m
+  interval: 1m
   path: ./infrastructure/storage-transip
   prune: true
   sourceRef:
