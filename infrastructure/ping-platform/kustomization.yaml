@@ -15,4 +15,4 @@ resources:
   - helmrepository.yaml
   - helmrelease.yaml
   - worldofciamnl.enc.yaml
-  - middleware.yaml
+#  - middleware.yaml

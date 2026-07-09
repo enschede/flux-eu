@@ -57,9 +57,9 @@ spec:
               - op: add
                 path: /metadata/annotations/traefik.ingress.kubernetes.io~1service.serversscheme
                 value: https
-              - op: add
-                path: /metadata/annotations/traefik.ingress.kubernetes.io~1router.middlewares
-                value: ping-platform-admin-ui-no-cache@kubernetescrd
+#              - op: add
+#                path: /metadata/annotations/traefik.ingress.kubernetes.io~1router.middlewares
+#                value: ping-platform-admin-ui-no-cache@kubernetescrd
 
           - target:
               kind: Ingress
