@@ -2,7 +2,7 @@ apiVersion: source.toolkit.fluxcd.io/v1
 kind: HelmRelease
 metadata:
   name: forgeops
-  namespace: flux-system
+  namespace: ping-platform
 spec:
   interval: 1m
   chart:
