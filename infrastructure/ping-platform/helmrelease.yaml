@@ -57,13 +57,27 @@ spec:
               - op: add
                 path: /metadata/annotations/traefik.ingress.kubernetes.io~1service.serversscheme
                 value: https
+
           - target:
-              kind: Service
-              name: admin-ui
+              kind: Ingress
+              name: end-user-ui
             patch: |
-              - op: replace
-                path: /spec/ports/0/name
-                value: http
-              - op: replace
-                path: /spec/ports/0/targetPort
-                value: 8081
+              - op: add
+                path: /metadata/annotations/traefik.ingress.kubernetes.io~1service.serversscheme
+                value: https
+
+          - target:
+              kind: Ingress
+              name: idm
+            patch: |
+              - op: add
+                path: /metadata/annotations/traefik.ingress.kubernetes.io~1service.serversscheme
+                value: https
+
+          - target:
+              kind: Ingress
+              name: login-ui
+            patch: |
+              - op: add
+                path: /metadata/annotations/traefik.ingress.kubernetes.io~1service.serversscheme
+                value: https
