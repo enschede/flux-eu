@@ -29,13 +29,13 @@ spec:
       name: identity-platform-values
       valuesKey: values.yaml
 
-  postRenderers:
-    - kustomize:
-        patches:
-          - target:
-              kind: Ingress
-              namespace: ping-platform
-            patch: |
-              - op: add
-                path: /metadata/annotations/traefik.ingress.kubernetes.io~1service.serversscheme
-                value: https
+#  postRenderers:
+#    - kustomize:
+#        patches:
+#          - target:
+#              kind: Ingress
+#              namespace: ping-platform
+#            patch: |
+#              - op: add
+#                path: /metadata/annotations/traefik.ingress.kubernetes.io~1service.serversscheme
+#                value: https
