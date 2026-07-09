@@ -4,5 +4,5 @@ metadata:
   name: forgeops
   namespace: flux-system
 spec:
-  interval: 1h
+  interval: 1m
   url: https://ForgeRock.github.io/forgeops/
