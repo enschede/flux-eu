@@ -35,7 +35,6 @@ spec:
           - target:
               kind: Ingress
               name: am
-              namespace: ping-platform
             patch: |
               - op: add
                 path: /metadata/annotations/traefik.ingress.kubernetes.io~1service.serversscheme
@@ -43,7 +42,6 @@ spec:
           - target:
               kind: Service
               name: am
-              namespace: ping-platform
             patch: |
               - op: replace
                 path: /spec/ports/0/name
