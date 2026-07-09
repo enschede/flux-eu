@@ -46,11 +46,11 @@ spec:
               namespace: ping-platform
             patch: |
               - op: replace
-              path: /spec/ports/0/name
-              value: http
+                path: /spec/ports/0/name
+                value: http
               - op: replace
-              path: /spec/ports/0/targetPort
-              value: 8081
+                path: /spec/ports/0/targetPort
+                value: 8081
           - target:
               kind: Ingress
               name: admin-ui
