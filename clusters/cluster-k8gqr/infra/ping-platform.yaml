@@ -12,8 +12,8 @@ spec:
     name: flux-system
     namespace: flux-system
   wait: true
-#  dependsOn:
-#    - name: traefik
-#    - name: cert-manager
-#    - name: secret-agent
-#    - name: storage
+  dependsOn:
+    - name: traefik
+    - name: cert-manager
+    - name: secret-agent
+    - name: infra-storage
