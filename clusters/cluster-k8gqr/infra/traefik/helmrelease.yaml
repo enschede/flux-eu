@@ -48,7 +48,3 @@ spec:
         enabled: true
       kubernetesIngress:
         enabled: true
-
-    logs:
-      general:
-        level: INFO
