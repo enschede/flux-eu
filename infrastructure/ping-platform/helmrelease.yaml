@@ -49,11 +49,21 @@ spec:
               - op: replace
                 path: /spec/ports/0/targetPort
                 value: 8081
+
           - target:
               kind: Ingress
               name: admin-ui
-              namespace: ping-platform
             patch: |
               - op: add
                 path: /metadata/annotations/traefik.ingress.kubernetes.io~1service.serversscheme
                 value: https
+          - target:
+              kind: Service
+              name: admin-ui
+            patch: |
+              - op: replace
+                path: /spec/ports/0/name
+                value: http
+              - op: replace
+                path: /spec/ports/0/targetPort
+                value: 8081
