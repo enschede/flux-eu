@@ -2,7 +2,7 @@
 apiVersion: v1
 kind: Secret
 metadata:
-  name: github-deploy-ping-infra
+  name: github-deploy-ping-platform
   namespace: flux-system
 stringData:
   identity: ENC[AES256_GCM,data:HOYC/C6ukpl4bcmiRtAiOR1jlNPfsoMNO81hbJIGixdIE13qq6agJ2hXHiwvke0nJRZxETv2Y1CrIGMwHdsjJNIzRsZ53hCs/KQy6aBuuYHrhYYz9rcBzQUgCTLnrD9H8o8j3zhySzNKQ20gdMgeRCEkByRdy1x4ooZTzt3Tua2gk1hQ/oWCWVFvw+EO6q1zxEAf3M7pfJewJg3CU3Ro+4Txx9IKkIFWLC6GFLLKEEYaTj7AzBRUAQ9DuyfPEQ1EhO67p7OKYKxpvb5JXkbIu7wgYoy8h8cITjoQX0eU6R3jQxo5c8xmWvVmH+pRiMqs1Sg60I6kwuDhoisnFzNOT4oGKxVjcBPy6c1mKMkFKU0tgoXbbEf05g5D6snHq2MG4VMRQusDxtkqdm7ZZSNd2wrC1Wm9sDNrkNnI54gyYtpFOAbd9JUHF1cJXmoajJC5pbrXj9al9NjZto+EXERcJ52YBSTzSLq52WzQZayRKo/K6OpApnGyNa2F4c2VdIR06s/NzhvFdNt4+Blt6DKHNfYM8k+f2lTjCUYyVAUQ7ddSEss=,iv:Zp5+n/eSyodVLZ5Gr7IWpY0PjXr8TLZ3TLJijvAjmfo=,tag:2E8YIDvFFFBfipHlfewy2w==,type:str]
@@ -28,7 +28,7 @@ sops:
 apiVersion: source.toolkit.fluxcd.io/v1
 kind: GitRepository
 metadata:
-  name: ping-infra
+  name: ping-platform
   namespace: flux-system
 spec:
   interval: 1m
@@ -36,7 +36,7 @@ spec:
     branch: master
   url: ssh://github.com/enschede/transip-ping-infra.git
   secretRef:
-    name: github-deploy-ping-infra
+    name: github-deploy-ping-platform
 
 ---
 apiVersion: kustomize.toolkit.fluxcd.io/v1
@@ -50,7 +50,7 @@ spec:
   prune: true
   sourceRef:
     kind: GitRepository
-    name: ping-infra
+    name: ping-platform
     namespace: flux-system
   wait: true
   decryption:
@@ -70,7 +70,7 @@ spec:
   prune: true
   sourceRef:
     kind: GitRepository
-    name: ping-infra
+    name: ping-platform
     namespace: flux-system
   wait: true
   decryption:
@@ -90,7 +90,7 @@ spec:
   prune: true
   sourceRef:
     kind: GitRepository
-    name: ping-infra
+    name: ping-platform
     namespace: flux-system
   wait: true
   decryption:
