@@ -5,4 +5,4 @@ resources:
   - flux-system
   - infra/infra-storage-kustomization.yaml
   - infra/traefik.yaml
-#  - infra/ping-infra.yaml
+  - infra/ping-infra.yaml
