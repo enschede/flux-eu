@@ -62,6 +62,26 @@ spec:
 apiVersion: kustomize.toolkit.fluxcd.io/v1
 kind: Kustomization
 metadata:
+  name: ping-secrets
+  namespace: flux-system
+spec:
+  interval: 1m
+  path: ./ping-secrets
+  prune: true
+  sourceRef:
+    kind: GitRepository
+    name: ping-platform
+    namespace: flux-system
+  wait: true
+  decryption:
+    provider: sops
+    secretRef:
+      name: sops-age
+
+---
+apiVersion: kustomize.toolkit.fluxcd.io/v1
+kind: Kustomization
+metadata:
   name: secret-agent
   namespace: flux-system
 spec:
@@ -77,6 +97,8 @@ spec:
     provider: sops
     secretRef:
       name: sops-age
+  dependsOn:
+    - name: ping-secrets
 
 ---
 apiVersion: kustomize.toolkit.fluxcd.io/v1
