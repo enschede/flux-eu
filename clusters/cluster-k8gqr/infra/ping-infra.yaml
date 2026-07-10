@@ -78,3 +78,28 @@ spec:
     secretRef:
       name: sops-age
 
+---
+apiVersion: kustomize.toolkit.fluxcd.io/v1
+kind: Kustomization
+metadata:
+  name: ping-platform
+  namespace: flux-system
+spec:
+  interval: 1m
+  path: ./ping-platform
+  prune: true
+  sourceRef:
+    kind: GitRepository
+    name: ping-infra
+    namespace: flux-system
+  wait: true
+  decryption:
+    provider: sops
+    secretRef:
+      name: sops-age
+  dependsOn:
+    - name: traefik
+    - name: cert-manager
+    - name: secret-agent
+    - name: infra-storage
+
