@@ -31,7 +31,7 @@ metadata:
   name: ping-platform
   namespace: flux-system
 spec:
-  interval: 1m
+  interval: 15m
   ref:
     branch: master
   url: ssh://github.com/enschede/transip-ping-infra.git
@@ -45,7 +45,7 @@ metadata:
   name: cert-manager
   namespace: flux-system
 spec:
-  interval: 1m
+  interval: 15m
   path: ./cert-manager
   prune: true
   sourceRef:
@@ -65,7 +65,7 @@ metadata:
   name: ping-secrets
   namespace: flux-system
 spec:
-  interval: 1m
+  interval: 15m
   path: ./ping-secrets
   prune: true
   sourceRef:
@@ -85,7 +85,7 @@ metadata:
   name: secret-agent
   namespace: flux-system
 spec:
-  interval: 1m
+  interval: 15m
   path: ./secret-agent
   prune: true
   sourceRef:
@@ -107,7 +107,7 @@ metadata:
   name: ping-platform
   namespace: flux-system
 spec:
-  interval: 1m
+  interval: 15m
   path: ./ping-platform
   prune: true
   sourceRef:
