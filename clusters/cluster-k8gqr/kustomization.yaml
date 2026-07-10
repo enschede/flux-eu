@@ -5,6 +5,5 @@ resources:
   - flux-system
   - infra/infra-storage-kustomization.yaml
   - infra/traefik.yaml
-  - infra/cert-manager.yaml
-  - infra/secret-agent.yaml
+  - infra/ping-infra.yaml
   - infra/ping-platform.yaml
