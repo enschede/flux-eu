@@ -58,6 +58,5 @@ spec:
     secretRef:
       name: sops-age
   dependsOn:
-    - name: ingress-nginx
-    - name: forgerock
-    - name: oauth2-resource-app
+    - name: traefik
+    - name: ping-platform
