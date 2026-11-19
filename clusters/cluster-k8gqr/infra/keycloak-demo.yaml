@@ -23,20 +23,20 @@ sops:
     mac: ENC[AES256_GCM,data:04t7HOIyRk0Mefax9SVldRo9BIkZ8mvqfogn8cK/nLg9sE8H1qr+LI//dwNJ4ulUZC0vOb0mN8PZUqxqGoNCfOCc9boMv6iBzYCHx3LZW9gnxp44638ZUG3+pQGSGaIgCne6nc7hsL8d032gUQJDD/MPDWAhSWJptdyIaxqGs30=,iv:HgEpyO6puO5HL8/GQPmZW9TwXq2pEm1VFWEGLEUTMcg=,tag:lEEkOSHbiuYhCW4EfzlmDw==,type:str]
     version: 3.13.3
 
-#---
-#apiVersion: source.toolkit.fluxcd.io/v1
-#kind: GitRepository
-#metadata:
-#    name: keycloak-demo
-#    namespace: flux-system
-#spec:
-#    interval: 1m
-#    ref:
-#        branch: master
-#    url: git://github.com/enschede/KeycloakDemo.git
-#    secretRef:
-#        name: github-deploy-key-keycloak-demo
-#
+---
+apiVersion: source.toolkit.fluxcd.io/v1
+kind: GitRepository
+metadata:
+    name: keycloak-demo
+    namespace: flux-system
+spec:
+    interval: 1m
+    ref:
+        branch: master
+    url: git://github.com/enschede/KeycloakDemo.git
+    secretRef:
+        name: github-deploy-key-keycloak-demo
+
 #---
 #apiVersion: kustomize.toolkit.fluxcd.io/v1
 #kind: Kustomization
