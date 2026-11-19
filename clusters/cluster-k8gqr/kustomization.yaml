@@ -4,6 +4,6 @@ kind: Kustomization
 resources:
   - flux-system
   - infra/infra-storage-kustomization.yaml
-#  - infra/traefik.yaml
+  - infra/traefik.yaml
 #  - infra/ping-infra.yaml
 #  - applications/client-app.yaml
