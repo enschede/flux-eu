@@ -45,7 +45,7 @@ metadata:
     namespace: flux-system
 spec:
     interval: 1m
-    path: ./clusters/test
+    path: ./test/keycloak
     prune: true
     sourceRef:
         kind: GitRepository
