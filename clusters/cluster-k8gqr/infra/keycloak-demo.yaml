@@ -33,7 +33,7 @@ spec:
     interval: 1m
     ref:
         branch: master
-    url: git://github.com/enschede/KeycloakDemo.git
+    url: ssh://github.com/enschede/KeycloakDemo.git
     secretRef:
         name: github-deploy-key-keycloak-demo
 
