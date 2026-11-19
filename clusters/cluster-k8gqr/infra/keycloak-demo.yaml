@@ -1,0 +1,58 @@
+apiVersion: v1
+kind: Secret
+metadata:
+    name: github-deploy-key-keycloak-demo
+    namespace: flux-system
+stringData:
+    identity: ENC[AES256_GCM,data:EAcopXmaEf3ZISmlCPaRM1XYIuzSppWtpco06rTvzSilENS9d5qT1gbpUD2BNA6/EB8IkwIOKwnyQqatBTonE1j21tmNQd69CpBRc5JnUjrmo2+FF00JuaPhP+NfzoR/Lp3hElSVE7fOjtn+RJcDXV0WLzsSZrQ1IMUbV0P/XrMzZYmC6AvuNss9st9F510TX6XNcLVdo8kqZx6wPsDg/tY2YqBuXG7nC2tIZqCMST/yJl58PlAoim1DoPMp0iub1+87qmCX22tluEP2vxdlrqSq1UlKfq9/qSAMnrOx2+hmJJDifGM7S2ied/IhiFOuKJv4+UVXtJYZbu9xzDr7wWqi6CbJT27JqsCXRSWpt/zGZLqzodDH4gl6vXNIzkufggX9icd+h2jlZcHwqAaY7P6iem7H2wpZSSAv57seFuWX5Jv30PxHhs3dqc4G2cpo9qmWfftkbsqZI9DnKesUyRxt/vHg1pJwQcPI3FJcOTiSvt/TCX2K2q77NMSbT4Dkze0wWw1bbomEaCcHSoO86Gr1POEI2xbL8WNTdETxlfJ8qeI=,iv:Zjn6G5HXPfNEu/xpV0ovC4FpWraeiOd4/fIq63ttTGI=,tag:hgLWDKcOeDBsI3d90ZQU3w==,type:str]
+    identity.pub: ENC[AES256_GCM,data:iVm5AiKrpgxBd0STZJthv4rGb6fTA6bab35u52Qe9JUYc2d6Z/PA7ErIJozFF7BY7pe70eVchc2dRH/6FrUoP5CtWiPhTxwlVwMDbZtlNK/1,iv:6gISN73EG9JDDdm0t+ehGmNXVFh2qT44lvpkTEI2xr0=,tag:SGlOuohALlxhMHYGm119QQ==,type:str]
+    known_hosts: ENC[AES256_GCM,data:W12U1tGiGx0Yv41FzBSCnlnMrWQhPnTM39IMwWohGdx07DLFLrVdgsiXXJqp13PRilW5FhaIpI3r3OxesNBzhO/jHoiCTaCEYtcpuLF3LZRa147g6C0pUuACzefAW6EDSWYFH+5LOkLGDc/+f1Rx6tPpKbpVEgemWw4g/Fxl/EXveQYJFPxvHXH4ruYkqM8fObZEXF+KrLQVwHp4XYwlmi7bDQdV7vR+CyzL,iv:UVI6H8uErUvqOWzxHg5gaOMydb0TzI6dJVUGopIVprI=,tag:GnAKTNgTr0Qc6TUJcq/Dwg==,type:str]
+sops:
+    age:
+        - enc: |
+            -----BEGIN AGE ENCRYPTED FILE-----
+            YWdlLWVuY3J5cHRpb24ub3JnL3YxCi0+IFgyNTUxOSBJRUQzOHR0VG1WZnZUTkd1
+            WlZqVDd5ZGNEMGdOMFJOdlNzK29QYlh1UlFRCm5aN2hld3o4QXE3R01ZbHlhRkR5
+            aSs1ZW1MMUNNaEJoUjVHVW5wb2ltNVEKLS0tIGkrNXRnV1B6aWM4Q1krYUU5VVVX
+            dHdNQWJuUi90VnFsQkRvWWlqeWswYzgKF5Vhlc9qQ1Gyznj93fatI5Qj03Z745yr
+            65UZ0kzKOUldknEqWVZTLyJ2e+f/udYB8MF/Idg6hi9Z/sMralUfAw==
+            -----END AGE ENCRYPTED FILE-----
+          recipient: age1spe3avhtcgkgqujprtujackxw6au5h8tum6nk6czmxgaclprx5tsz9jrhr
+    encrypted_regex: ^(data|stringData)$
+    lastmodified: "2026-11-19T20:22:43Z"
+    mac: ENC[AES256_GCM,data:04t7HOIyRk0Mefax9SVldRo9BIkZ8mvqfogn8cK/nLg9sE8H1qr+LI//dwNJ4ulUZC0vOb0mN8PZUqxqGoNCfOCc9boMv6iBzYCHx3LZW9gnxp44638ZUG3+pQGSGaIgCne6nc7hsL8d032gUQJDD/MPDWAhSWJptdyIaxqGs30=,iv:HgEpyO6puO5HL8/GQPmZW9TwXq2pEm1VFWEGLEUTMcg=,tag:lEEkOSHbiuYhCW4EfzlmDw==,type:str]
+    version: 3.13.3
+
+---
+apiVersion: source.toolkit.fluxcd.io/v1
+kind: GitRepository
+metadata:
+    name: keycloak-demo
+    namespace: flux-system
+spec:
+    interval: 1m
+    ref:
+        branch: master
+    url: git://github.com/enschede/KeycloakDemo.git
+    secretRef:
+        name: github-deploy-key-keycloak-demo
+
+---
+apiVersion: kustomize.toolkit.fluxcd.io/v1
+kind: Kustomization
+metadata:
+    name: keycloak-demo
+    namespace: flux-system
+spec:
+    interval: 1m
+    path: ./clusters/test/kustomization.yaml
+    prune: true
+    sourceRef:
+        kind: GitRepository
+        name: keycloak-demo
+        namespace: flux-system
+    wait: true
+    decryption:
+        provider: sops
+        secretRef:
+            name: sops-age
