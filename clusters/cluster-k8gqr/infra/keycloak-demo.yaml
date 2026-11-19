@@ -30,7 +30,7 @@ metadata:
     name: keycloak-demo
     namespace: flux-system
 spec:
-    interval: 1m
+    interval: 15m
     ref:
         branch: master
     url: ssh://github.com/enschede/KeycloakDemo.git
@@ -44,7 +44,7 @@ metadata:
     name: keycloak-demo
     namespace: flux-system
 spec:
-    interval: 1m
+    interval: 15m
     path: ./apps/test/keycloak
     prune: true
     sourceRef:
@@ -56,3 +56,8 @@ spec:
         provider: sops
         secretRef:
             name: sops-age
+    healthChecks:
+        - apiVersion: apps/v1
+          kind: Deployment
+          name: keycloak
+          namespace: keycloak
