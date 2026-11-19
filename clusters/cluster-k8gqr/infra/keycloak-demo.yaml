@@ -45,7 +45,7 @@ metadata:
     namespace: flux-system
 spec:
     interval: 1m
-    path: ./test/keycloak
+    path: ./apps/test/keycloak
     prune: true
     sourceRef:
         kind: GitRepository
