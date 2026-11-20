@@ -5,6 +5,7 @@ resources:
   - flux-system
   - infra/infra-storage-kustomization.yaml
   - infra/traefik.yaml
-  - infra/keycloak-demo.yaml
+#  - infra/keycloak-demo.yaml
+  - infra/keycloak-demo-2.yaml
 #  - infra/ping-infra.yaml
 #  - applications/client-app.yaml
