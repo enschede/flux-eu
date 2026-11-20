@@ -30,7 +30,7 @@ metadata:
     name: keycloak-demo
     namespace: flux-system
 spec:
-    interval: 15m
+    interval: 1m
     ref:
         branch: master
     url: ssh://github.com/enschede/KeycloakDemo.git
@@ -44,7 +44,7 @@ metadata:
     name: keycloak-demo
     namespace: flux-system
 spec:
-    interval: 15m
+    interval: 1m
     path: ./apps/test/keycloak
     prune: true
     sourceRef:
