@@ -59,4 +59,4 @@ spec:
       name: sops-age
   dependsOn:
     - name: traefik
-    - name: ping-platform
+    - name: keycloak-demo-2

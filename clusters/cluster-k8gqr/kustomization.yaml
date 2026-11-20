@@ -8,4 +8,4 @@ resources:
 #  - infra/keycloak-demo.yaml
   - infra/keycloak-demo-2.yaml
 #  - infra/ping-infra.yaml
-#  - applications/client-app.yaml
+  - applications/client-app.yaml
